@@ -1,0 +1,14 @@
+[
+  {
+    "id": "job-scraper",
+    "name": "Job Scraper",
+    "version": "1.0.4",
+    "description": "Search and export job listings from Indeed, LinkedIn, Google, and more across 60+ countries.",
+    "category": "Tools",
+    "author": "SeorexTech",
+    "pythonDeps": ["python-jobspy"],
+    "downloadUrl": "https://raw.githubusercontent.com/DxDeathstrike/SeorexLauncher/main/module-store/job-scraper/job-scraper.zip",
+    "icon": null,
+    "featured": true
+  }
+]
