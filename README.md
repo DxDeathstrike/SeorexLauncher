@@ -45,7 +45,7 @@ SeorexTech Launcher is a single app that houses all SeorexTech tools. Browse and
 | **Download manager** | Queue, pause, resume, and cancel downloads with live progress. |
 | **Auto-updater** | The launcher checks for updates on startup and downloads them silently in the background. |
 | **Authentication** | Secure email-based login - enter your email, get a code, you're in. |
-| **Ban system** | Banned accounts are blocked at login with a toast notification. Attempts are logged and reported via Discord. |
+| **Ban system** | Banned accounts are blocked at login with a toast notification.  |
 | **Python auto-install** | Python 3.12 is installed silently via winget on first use - no manual setup required. |
 
 ---
