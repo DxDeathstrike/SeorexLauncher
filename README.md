@@ -11,7 +11,7 @@ Install the tools you want. Launch them like apps. Stay current automatically.
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blue?style=flat-square)](https://github.com/DxDeathstrike/SeorexLauncher/releases)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey?style=flat-square)](#)
-[![License](https://img.shields.io/badge/license-Proprietary-red?style=flat-square)](LICENSE.txt)
+[![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 
 </div>
 
@@ -27,12 +27,12 @@ SeorexTech Launcher is a single app that houses all SeorexTech tools. Browse and
 
 1. Go to the [**Releases page**](https://github.com/DxDeathstrike/SeorexLauncher/releases).
 2. Download the latest installer for your platform:
-   - **Windows** — `SeorexTech-Launcher-Setup-x.x.x.exe`
-   - **macOS** — `SeorexTech-Launcher-x.x.x.dmg`
-   - **Linux** — `SeorexTech-Launcher-x.x.x.AppImage`
+   - **Windows** - `SeorexTech-Launcher-Setup-x.x.x.exe`
+   - **macOS** - `SeorexTech-Launcher-x.x.x.dmg`
+   - **Linux** - `SeorexTech-Launcher-x.x.x.AppImage`
 3. Run the installer. The launcher installs to your user folder — no admin rights needed.
 
-> **Python requirement:** Some modules use Python features. If prompted, install [Python 3.10+](https://python.org/downloads) and make sure it's added to your PATH.
+> **Python:** Some modules use Python features. The launcher automatically installs Python 3.12 silently on first use via winget - no manual setup needed on Windows.
 
 ---
 
@@ -41,10 +41,12 @@ SeorexTech Launcher is a single app that houses all SeorexTech tools. Browse and
 | Feature | Description |
 |---|---|
 | **Module system** | Install tools as modules. Enable, disable, or remove them at any time without affecting the launcher. |
-| **Library** | All your installed and enabled modules in one place — launch any tool with one click. |
+| **Library** | All your installed and enabled modules in one place - launch any tool with one click. |
 | **Download manager** | Queue, pause, resume, and cancel downloads with live progress. |
 | **Auto-updater** | The launcher checks for updates on startup and downloads them silently in the background. |
-| **Authentication** | Secure email-based login — enter your email, get a code, you're in. |
+| **Authentication** | Secure email-based login - enter your email, get a code, you're in. |
+| **Ban system** | Banned accounts are blocked at login with a toast notification. Attempts are logged and reported via Discord. |
+| **Python auto-install** | Python 3.12 is installed silently via winget on first use - no manual setup required. |
 
 ---
 
@@ -118,7 +120,7 @@ You can also check manually any time on the **Updates** page.
 - Re-install the module from the Modules page.
 
 **Python tools aren't working**
-- Confirm Python 3.10+ is installed and on your system PATH: open a terminal and run `python --version`.
+- The launcher auto-installs Python 3.12 via winget. If it still fails, open a terminal and run `python --version` to confirm it installed correctly.
 
 **I'm not receiving the login email**
 - Check your spam folder.
@@ -133,8 +135,12 @@ You can also check manually any time on the **Updates** page.
 - [x] Library with one-click launch
 - [x] Download manager (queue, pause/resume, cancel)
 - [x] Auto-updater
-- [x] Python bridge
+- [x] Python bridge + silent Python 3.12 auto-install
 - [x] Email OTP authentication
+- [x] Supabase user logging (upsert on login, last_seen tracking)
+- [x] Ban system with Discord webhook alerts
+- [x] Duplicate account detection (login vs signup redirect)
+- [x] Enhanced diagnostics in settings
 - [ ] Remote module marketplace
 - [ ] Module signing and verification
 - [ ] Theming engine
@@ -144,7 +150,7 @@ You can also check manually any time on the **Updates** page.
 
 ## License
 
-Proprietary — SeorexTech. See [LICENSE.txt](LICENSE.txt) for details.
+MIT (c) 2026 Seorex - see [LICENSE](LICENSE)
 
 ---
 
