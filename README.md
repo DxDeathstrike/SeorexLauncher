@@ -1,6 +1,7 @@
 <div align="center">
 
-<img src="assets/images/ST-monogram.png" alt="SeorexTech Logo" width="80" />
+
+<img src="https://github.com/user-attachments/assets/7e2fc181-b437-4b47-99cb-f0f132e4d1ee" alt="SeorexTech Logo" width="80" />
 
 # SeorexTech Launcher
 
@@ -18,7 +19,7 @@ Install the tools you want. Launch them like apps. Stay current automatically.
 
 ## What is it?
 
-SeorexTech Launcher is a single app that houses all SeorexTech tools. Browse and install tools as modules, launch them in one click, and receive updates automatically — no manual downloads required.
+SeorexTech Launcher is a single app that houses all SeorexTech tools. Browse and install tools as modules, launch them in one click, and receive updates automatically - no manual downloads required.
 
 ---
 
