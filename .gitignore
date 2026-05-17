@@ -27,3 +27,12 @@ desktop.ini
 .claude/settings.local.json
 .claude/skills/
 skills-lock.json
+
+
+
+# no code
+/assets/
+/scripts/
+/src/
+main.js
+preload.js

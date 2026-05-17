@@ -1,0 +1,139 @@
+{
+  "name": "seorextech-launcher",
+  "productName": "SeorexTech Launcher",
+  "version": "1.0.0",
+  "description": "SeorexTech Launcher — a modular desktop platform for installing, updating, and running SeorexTech projects.",
+  "main": "main.js",
+  "author": {
+    "name": "SeorexTech",
+    "email": "seorextech@gmail.com",
+    "url": "https://seorextech.com"
+  },
+  "homepage": "https://seorextech.com",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --enable-logging",
+    "pack": "electron-builder --dir --win",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "dist": "npm run clean && electron-builder --win",
+    "dist:all": "npm run clean && electron-builder --win --mac --linux",
+    "release": "npm run clean && node scripts/release.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DxDeathstrike/SeorexLauncher.git"
+  },
+  "keywords": [
+    "seorextech",
+    "launcher",
+    "electron",
+    "desktop",
+    "modules",
+    "platform"
+  ],
+  "devDependencies": {
+    "electron": "^42.0.0",
+    "electron-builder": "^26.8.1"
+  },
+  "dependencies": {
+    "7zip-bin": "^5.2.0",
+    "adm-zip": "^0.5.17",
+    "electron-updater": "^6.3.9",
+    "fs-extra": "^11.3.5",
+    "node-7z": "^3.0.0",
+    "semver": "^7.6.0"
+  },
+  "build": {
+    "appId": "com.seorextech.launcher",
+    "productName": "SeorexTech Launcher",
+    "copyright": "Copyright © 2024 SeorexTech",
+    "asar": true,
+    "asarUnpack": [
+      "node_modules/7zip-bin/**",
+      "node_modules/@serialport/**",
+      "src/python/**"
+    ],
+    "compression": "maximum",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "!src/**/__pycache__/**",
+      "!src/**/*.pyc",
+      "assets/**/*",
+      "package.json",
+      "!src/**/*.map",
+      "!**/.DS_Store",
+      "!**/Thumbs.db"
+    ],
+    "extraResources": [],
+    "publish": {
+      "provider": "github",
+      "owner": "DxDeathstrike",
+      "repo": "SeorexLauncher",
+      "releaseType": "release"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icons/icon.ico",
+      "executableName": "SeorexTech-Launcher",
+      "artifactName": "SeorexTech-Launcher-Setup-${version}.exe",
+      "verifyUpdateCodeSignature": false
+    },
+    "nsis": {
+      "oneClick": true,
+      "installerIcon": "assets/icons/icon.ico",
+      "uninstallerIcon": "assets/icons/icon.ico",
+      "installerHeaderIcon": "assets/icons/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "SeorexTech Launcher",
+      "menuCategory": "SeorexTech",
+      "deleteAppDataOnUninstall": false,
+      "runAfterFinish": true,
+      "displayLanguageSelector": false,
+      "installerLanguages": [
+        "en_US"
+      ]
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "icon": "assets/icons/icon.icns",
+      "artifactName": "SeorexTech-Launcher-${version}.dmg",
+      "category": "public.app-category.utilities"
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icons/icon.png",
+      "artifactName": "SeorexTech-Launcher-${version}.AppImage",
+      "category": "Utility"
+    }
+  }
+}
