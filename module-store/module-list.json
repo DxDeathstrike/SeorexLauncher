@@ -12,13 +12,5 @@
     "downloadUrl": "https://raw.githubusercontent.com/DxDeathstrike/SeorexLauncher/main/module-store/job-scraper/job-scraper.zip",
     "icon": null,
     "featured": true
-  },
-  {
-    "id": "000000",
-    "name": "test module",
-    "version": "1.0.0",
-    "description": "",
-    "downloadUrl": "https://raw.githubusercontent.com/DxDeathstrike/SeorexLauncher/main/module-store/000000.zip",
-    "updatedAt": "2026-05-16T14:15:35.369Z"
   }
 ]
