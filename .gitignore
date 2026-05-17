@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output (electron-builder)
+dist/
+out/
+
+# Environment variables
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude Code (personal local config)
+.claude/settings.local.json
+.claude/skills/
+skills-lock.json
